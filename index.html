@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class='wrapper'>
+
+        <header>
+            <h1>THE POMODORO TIMER</h1>
+        </header>
+
+        <div class='pomodoroTimer'>
+            <div class='pomodoroClock'>
+                <h2 id='time'>0:00</h1>
+                    <div id='myItem1' class="ldBar" style="width:60%;height:60%;max-width:55%;max-height:55%;" ,
+                        data-stroke="data:ldbar/res,gradient(0,1,#eeebdd,#ce1212,#f7ddde,#ce1212)" ,
+                        data-path="M 100 350 A 50 50 0 1 1 650 350  ">
+                    </div>
+
+                    <!-- <div class="backgroundImage">
+                        <img id='backgroundImageSource' src="./image/01.png" alt="">
+                    </div> -->
+
+
+
+            </div>
+            <div class='clockButtons'>
+                <button class='startOrStop start' onclick="pomodoroApp.startTimer()">Start</button>
+                <button class='startOrStop stop' onclick="pomodoroApp.stopTimer()">Stop</button>
+
+            </div>
+
+
+
+            <div class='taskSection'>
+                <h3>Tasks</h3>
+                <hr>
+
+                <div class='taskContent'>
+
+
+                </div>
+
+                <form class='taskInput'>
+                    <input type="text" id="messageContent" name="fname" placeholder='What are you working on....'>
+                    <input type="Number" id="numberContent" name="totalPomodoro" placeholder="Estimated Pomodoro's">
+                    <input id='taskSubmit' type="submit" value="Create New Task">
+                </form>
+
+
+            </div>
+            <div id="myModal" class="modal"></div>
+            <div class='settingsPopup'>
+                <div class='innerSettingsContent'>
+                    <div class='settingForm'>
+
+
+
+                        <div class='settingsSections'>
+                            <h3>Settings</h3>
+                            <h3 id='closeButton'>&#10006</h3>
+                        </div>
+                        <hr>
+                        <div class="innerContent">
+                            <h3>Time (Minutes)</h2>
+                                <div>
+                                    <form>
+                                        <div>
+                                            <label for="goal">Study Time:</label>
+                                            <input type="number" id="studyTime">
+                                        </div>
+
+                                        <div>
+                                            <label for="goal">Short Break:</label>
+                                            <input type="number" id="breakTime">
+                                        </div>
+
+                                        <div>
+                                            <label for="goal">Long Break:</label>
+                                            <input type="number" id="longBreakTime">
+                                        </div>
+
+
+
+                                    </form>
+
+                                </div>
+
+
+                        </div>
+
+                        <hr>
+
+                    </div>
+
+                    <div class="innerContent">
+                        <div class='settingsSections2'>
+                            <h3>Auto Continue</h3>
+                            <label class="switch">
+                                <input type="checkbox" checked='true' id='autoCheck'>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="innerContent">
+                        <h3>Default's</h2>
+
+                            <div class='settingButtonDefault'>
+                                <button class='settingsButtons' onclick='pomodoroApp.set25Timer()'>25 Mins</button>
+                                <button class='settingsButtons' onclick='pomodoroApp.set15Timer()'>15 Mins</button>
+                                <button class='settingsButtons' onclick='pomodoroApp.set10Timer()'>10 Mins</button>
+                            </div>
+                    </div>
+
+
+
+
+                    <div class='settingsFooter'>
+
+                        <input id='settingSubmit' type="submit" value="OK">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class='settingsDiv'>
+                <button id="settingsButton" class='settings'> Settings
+                </button>
+
+            </div>
+
+
+
+
+        </div>
+        <audio id="audioContainer">
+            <source src="beep.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+    <link rel=" stylesheet" type="text/css" href="./scriptFiles/loading-bar.css" />
+    <script type="text/javascript" src="./scriptFiles/loading-bar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./scriptFiles/script.js"></script>
+
+</body>
+
+</html>
